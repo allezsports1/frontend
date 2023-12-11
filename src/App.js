@@ -1,9 +1,8 @@
-import logo from './logo.svg';
 import './App.css';
 import { BrowserRouter as Router , Routes , Route, BrowserRouter } from 'react-router-dom';
-import Home from './components/main/Home/Home';
-import Navbar from './components/common/Navbar/Navbar';
-import Footer from './components/common/Footer/Footer';
+import Home from './front-end/components/Home';
+import Navbar from './front-end/components/Navbar';
+import Footer from './front-end/components/Footer';
 
 function App() {
   return (
