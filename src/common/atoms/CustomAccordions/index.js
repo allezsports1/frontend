@@ -61,7 +61,7 @@ const CustomAccordions = ({
 
     return(<div className={`customAccordions ${containerClass}`}>
         {
-         data?.length && data?.map((el,key) =>
+         data?.length > 0 && data?.map((el,key) =>
             <AccordionWrapper key={key} expanded={open===key} onChange={handleChange(key)}>
                 <AccordionSummary className={titleClass} aria-controls={`content-${key}`} id={`header-${key}`}>
                     {el?.question}

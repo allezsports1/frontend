@@ -6,11 +6,17 @@ import RouteList from './front-end/RouteList'
 
 function App() {
   return (
-    <div className="App">
+    <div className="container">
         <Router>
+          <section className='row'>
           <Navbar/>
-          <RouteList />
-          <Footer/>
+          </section>
+          <section className='row'>
+            <RouteList />
+          </section>
+          <section className='row'>
+            <Footer/>
+          </section>
         </Router>
     </div>
   );
