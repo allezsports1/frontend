@@ -1,5 +1,13 @@
+@use "sass:math";
+
 @function light-comp($color) {
   $complement: complement($color);
   $light-complement: lighten($complement, 30%);
   @return $light-complement;
+}
+
+// Pixels to Rem
+@function toRem($value) {
+  $remValue: math.div($value, $oneRem) + rem;
+  @return $remValue;
 }
