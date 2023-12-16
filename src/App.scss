@@ -1,0 +1,10 @@
+@import "./sass/index.scss";
+
+.header{
+    background: $bg-color;
+    box-shadow: 0 0 toRem(7) toRem(1) $rgb-color1;
+    transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;
+    padding: 0 toRem(15);
+}
+.main{}
+.footer{}

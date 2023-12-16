@@ -1,0 +1,21 @@
+@import '../../../sass/index.scss';
+
+
+
+.upper-footer{
+    transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;
+    padding: toRem(90) 0;
+    background-color: $bg-color3;
+}
+
+.bottom-footer{
+    background-color: $bg-color4;
+    transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;
+    padding: toRem(35) 0;
+    span{
+        color: $content-color1;
+    }
+    .text-right{
+        text-align: right;
+    }
+}

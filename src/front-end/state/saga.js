@@ -1,14 +1,14 @@
 import { takeEvery, put } from 'redux-saga/effects';
 import { GET_BLOG, SET_BLOG_LIST, ABOUT_US_CONTENT, SET_ABOUT_US_CONTENT, ENDPOINTS } from './constants';
-import { AboutPageResponse } from './mock/contactData'; 
+import { AboutPageResponse, BlogContent } from './mock/contactData'; 
 
 function* getBlogsList() {
     console.log("blog saga called");
     try {
     // loading started
-    const res = yield fetch(ENDPOINTS.BLOGS);
-    const data = yield res.json();
-    console.log("Blog data",data);
+    // const res = yield fetch(ENDPOINTS.BLOGS);
+    // const data = yield res.json();
+    const data = BlogContent
     if(data){
         yield put({type: SET_BLOG_LIST, data})
     }

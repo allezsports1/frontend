@@ -1,0 +1,10 @@
+@import "../../../sass/index.scss";
+
+
+.breadcrumb{
+    position: relative;
+    background-color: $bg-color1;
+    margin-top: toRem(4);
+    margin-bottom: toRem(40);
+    padding: toRem(10) 0;
+}

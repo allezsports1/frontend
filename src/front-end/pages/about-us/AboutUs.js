@@ -3,9 +3,10 @@ import CustomAccordions from "../../../common/atoms/CustomAccordions";
 import { Box } from "@mui/material";
 import { useDispatch } from 'react-redux'
 import { getAboutUsContent } from '../../state/actions';
-import {useSelector} from 'react-redux'
+import { useSelector } from 'react-redux'
 import { useEffect, useState } from 'react';
-import './AboutUs';
+import Breadcrumb from '../../organisms/breadcrumbs'
+import TopBanner from '../../organisms/top-banner'; 
 
 
 const AboutUs = () => {
@@ -14,7 +15,7 @@ const AboutUs = () => {
     const dataResponse = useSelector((state)=>state.clientReducer?.contactUsResponse);
 
     useEffect(()=>{
-        !data?.data && dispatch(getAboutUsContent())
+        dispatch(getAboutUsContent())
     },[dispatch]);
 
     useEffect(()=>{
@@ -27,10 +28,13 @@ const AboutUs = () => {
         containerClass:'aboutAccordionBox'
     }
     return(<div className="">
-                <Box className="">{PAGE_ABOUT_US.TITLE}</Box>
-                <div className="">
+                <Breadcrumb title={PAGE_ABOUT_US.TITLE} />
+                {/* <Box className="">
+                    <TopBanner pageTitle={PAGE_ABOUT_US.TITLE} className="aboutUs-topBanner" />
+                </Box> */}
+                <Box className="container">
                     <CustomAccordions {...setProps} />
-                </div>
+                </Box>
             </div>)
       
 }
