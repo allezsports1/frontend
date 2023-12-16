@@ -1,20 +1,20 @@
-import './App.css';
+import './App.scss';
 import { BrowserRouter as Router } from 'react-router-dom';
-import Navbar from './front-end/components/Navbar';
 import Footer from './front-end/components/Footer';
 import RouteList from './front-end/RouteList'
+import Header from './front-end/components/header';
 
 function App() {
   return (
-    <div className="container">
+    <div>
         <Router>
-          <section className='row'>
-          <Navbar/>
+          <section className='header'>
+            <Header />
           </section>
-          <section className='row'>
+          <section className='main'>
             <RouteList />
           </section>
-          <section className='row'>
+          <section className='footer'>
             <Footer/>
           </section>
         </Router>

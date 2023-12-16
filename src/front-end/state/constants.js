@@ -8,5 +8,5 @@ export const SET_ABOUT_US_CONTENT = "SET_ABOUT_US_CONTENT"
 
 
 export const ENDPOINTS = {
-    BLOGS : 'https://jsonplaceholder.typicode.com/posts',
+    BLOGS : 'https://jsonplaceholder.typicode.com/photos?albumId=1',
 }

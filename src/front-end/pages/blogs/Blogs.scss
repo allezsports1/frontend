@@ -1,0 +1,29 @@
+@import "../../../sass/index.scss";
+
+.blogPage{
+    .blog-image{
+        width: 100%;
+        height: auto;
+    }
+    .title{
+        font-size: toRem(34);
+        line-height: 1.2;
+        color: $content-color3;
+        font-weight: 600;
+        transition: 0.4s;
+        text-transform: capitalize;
+        margin-bottom: toRem(20);
+        margin-top: toRem(30);
+    }
+    .content{
+        font-size: 16px;
+        line-height: 28px;
+        color: $content-color;
+    }
+    .read-more{
+        &:hover, &:active{
+            background-color: $bg-color2;
+            color: white;
+        }
+    }
+}

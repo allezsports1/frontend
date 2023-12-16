@@ -3,7 +3,9 @@ export const PAGE_ABOUT_US ={
 };
 
 export const PAGE_BLOGS = {
-    TITLE: "Blogs"
+    TITLE: "Blogs",
+    RECENT_POSTS: "Recent Posts",
+    RECENT_NEWS: "Recent News"
 }
 
 

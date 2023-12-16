@@ -9,6 +9,11 @@
 
 body {
   font-family: Poppins;
+  font-weight: 400;
+  font-size: toRem(16);
+  line-height: toRem(23);
+  letter-spacing: 0;
+  color: $content-color;
 }
 
 ul {
