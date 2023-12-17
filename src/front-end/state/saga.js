@@ -31,7 +31,7 @@ function* getAboutUsContent() {
     } catch (err) {
         console.log("something went wrong",err);
     } finally {
-        // loading completed
+        // loading 
     }
 }
 
