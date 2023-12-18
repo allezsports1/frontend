@@ -1,4 +1,9 @@
+@import '../../../sass/index.scss';
+
 .sidebar{
+    .widget{
+        padding: toRem(30) toRem(30) 0 toRem(30);
+    }
     .title{
         font-size: 1.75rem;
         line-height: 1.25;

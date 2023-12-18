@@ -1,17 +1,17 @@
-import { Box } from '@mui/material';
 import { Link } from 'react-router-dom'
 import './Breadcrumb.scss'
 
 const Breadcrumb = ({
-    title
+    title,
+    class_name = ''
 }) =>{
 
     return(
-        <Box className="breadcrumb">
+        <div className={`breadcrumb ${class_name}`} >
             <div className="container">
                 <Link to="/">Home</Link> {">"} {title}
             </div> 
-        </Box>
+        </div>
     )
 }
 

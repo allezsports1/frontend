@@ -3,10 +3,12 @@ import CustomAccordions from "../../../common/atoms/CustomAccordions";
 import { Box } from "@mui/material";
 import { useDispatch } from 'react-redux'
 import { getAboutUsContent } from '../../state/actions';
-import { useSelector } from 'react-redux'
+import { useSelector } from 'react-redux';
 import { useEffect, useState } from 'react';
-import Breadcrumb from '../../organisms/breadcrumbs'
-import TopBanner from '../../organisms/top-banner'; 
+import TopBanner from '../../organisms/top-banner';
+import './AboutUs.scss';
+const style = {backgroundImage:"url('/assets/images/bg_top_heading.jpg')"}
+
 
 
 const AboutUs = () => {
@@ -27,11 +29,12 @@ const AboutUs = () => {
         isOpen: true,
         containerClass:'aboutAccordionBox'
     }
-    return(<div className="">
-                <Breadcrumb title={PAGE_ABOUT_US.TITLE} />
-                {/* <Box className="">
-                    <TopBanner pageTitle={PAGE_ABOUT_US.TITLE} className="aboutUs-topBanner" />
-                </Box> */}
+    return(<div className="full-width">
+                <TopBanner 
+                    pageTitle={PAGE_ABOUT_US?.TITLE} 
+                    style={style}
+                    class_name="breadcrumb-background"
+                />
                 <Box className="container">
                     <CustomAccordions {...setProps} />
                 </Box>
