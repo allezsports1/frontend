@@ -1,5 +1,6 @@
 import { styled } from '@mui/material/styles';
 import { Paper } from "@mui/material";
+import './CustomBox.scss';
 
 
 const CustomBox = styled(Paper)(({ theme }) => ({
@@ -10,5 +11,9 @@ const CustomBox = styled(Paper)(({ theme }) => ({
     marginBottom : '1rem',
     color: theme.palette.text.secondary,
 }));
+
+const CustomPapper= ()=>{
+    return (<Paper className="paperClass">square corners</Paper>)
+}
 
 export default CustomBox;

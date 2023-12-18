@@ -4,11 +4,12 @@ import { PAGE_BLOGS } from  "../../constants";
 import { Box, Typography, Divider } from "@mui/material";
 import CustomBox from "../../organisms/custom-box";
 import CustomSearch from '../../../common/atoms/searchBox';
+import { Link } from 'react-router-dom'
 
 
 const PageSidebar = ({pageType,data,searchAction})=>{
 
-    return(<Box className={`sidebar_${pageType}`}>
+    return(<Box className={`sidebar sidebar_${pageType}`}>
             <CustomBox>
                 <CustomSearch search={searchAction} />
             </CustomBox>
@@ -18,7 +19,7 @@ const PageSidebar = ({pageType,data,searchAction})=>{
                 <Typography>
                 <ul>
                     {
-                        data?.slice(0, 5)?.map((e,i)=> <li key={i}><a>{e?.name}</a></li>) 
+                        data?.slice(0, parseInt(PAGE_BLOGS.BLOG_LIMIT_SIDEBAR))?.map((e,i)=> <li key={i}><Link to="#">{e?.name}</Link></li>) 
                     }
                 </ul>
                 </Typography>
@@ -29,7 +30,7 @@ const PageSidebar = ({pageType,data,searchAction})=>{
                 <Typography>
                     <ul>
                     {
-                        data?.slice(0, 5)?.map((e,i)=> <li key={i}><a>{e?.name}</a></li>) 
+                        data?.slice(0, parseInt(PAGE_BLOGS.NEWS_LIMIT_SIDEBAR))?.map((e,i)=> <li key={i}><Link to="#">{e?.name}</Link></li>) 
                     }
                     </ul>
                 </Typography>
