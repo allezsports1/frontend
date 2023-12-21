@@ -3,7 +3,7 @@ import { SET_BLOG_LIST, SET_ABOUT_US_CONTENT, USER_LOGIN_SUCCESS, FORGET_PASSWOR
 export const initialState = {
    blogResponse : [],
    contactUsResponse : [],
-   userLoginResponse: [],
+   loginResponse: [],
    forgetPasswordResponse: [],
 }
 
@@ -22,7 +22,7 @@ export const clientReducer = (state = initialState, action) => {
         case USER_LOGIN_SUCCESS : 
             return {
                 ...state,
-                userLoginResponse: action.data,
+                loginResponse: action.data,
             };
 
         case FORGET_PASSWORD_SUCCESS : 
