@@ -1,0 +1,11 @@
+
+@import  '../../../sass/index.scss';
+
+.form-row{
+    .icon{
+        position: absolute;
+        margin: toRem(13);
+        font-size: toRem(24);
+        color: $bg-color2;
+    }
+}

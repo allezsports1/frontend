@@ -1,14 +1,17 @@
 import { PAGE_BLOGS } from "../../constants";
-import { Box, Typography, Divider, Button } from "@mui/material";
-import { useDispatch } from 'react-redux'
+import { Box, Typography } from "@mui/material";
+import { useDispatch, useSelector } from 'react-redux'
 import { getBlogList } from '../../state/actions';
-import { useSelector} from 'react-redux';
 import { useEffect, useState } from 'react';
 import Grid from '@mui/material/Unstable_Grid2';
 import CustomBox from "../../organisms/custom-box";
 import Breadcrumb from '../../organisms/breadcrumbs'
 import PageSidebar from '../../organisms/sidebar';
 import './Blogs.scss';
+import CustomButton from "../../../common/atoms/button";
+import AccessTimeIcon from '@mui/icons-material/AccessTime';
+import SportsCricketOutlinedIcon from '@mui/icons-material/SportsCricketOutlined';
+import { getPostDate } from "../../../common/helper/utils";
 
 const Blogs = () => {
     const [blogData,setBlogData] = useState([]);
@@ -28,6 +31,10 @@ const Blogs = () => {
         setSearchString(val);
     };
 
+    const readMore = ()=>{
+        console.log("search string",searchString);
+    }
+
     return(<Box sx={{ flexGrow: 1 }} className="blogPage">
                 <Breadcrumb title={PAGE_BLOGS.TITLE} />
                 <Box className="container">
@@ -39,18 +46,22 @@ const Blogs = () => {
                             <Typography className="title" variant={"h2"} gutterBottom>
                                 {e?.name}
                             </Typography>
-                            <Divider className="divider" light />
-                            <Divider className="divider" light />
-                            <Typography className="content">
-                                {e?.description}
-                            </Typography>
-                            <Divider className="divider" light />
-                            <Box className="post-footer">
-                                asd
+                            <Box className="post-meta">
+                                <Box className="post-date">
+                                    <SportsCricketOutlinedIcon className="icon" /> Sports
+                                </Box>
+                                <span className="slash"></span>
+                                <Box className="post-date">
+                                    <AccessTimeIcon className="icon" /> {getPostDate()}
+                                </Box>
                             </Box>
-                            <Divider className="divider" light />
+                            <Box className="post-body">
+                                <Typography className="content">
+                                    {e?.description}
+                                </Typography>
+                            </Box>
                             <Box className="post-footer">
-                                <Button className="read-more" variant="outlined">Read More</Button>
+                                <CustomButton value={"Read More"} btnClick={()=> readMore() } />
                             </Box>
                         </CustomBox>
                     )}
