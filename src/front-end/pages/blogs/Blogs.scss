@@ -15,15 +15,32 @@
         margin-bottom: toRem(20);
         margin-top: toRem(30);
     }
-    .content{
-        font-size: 16px;
-        line-height: 28px;
-        color: $content-color;
+    .post-body{
+        padding-bottom: 2rem;
+        .content{
+            font-size: 16px;
+            line-height: 28px;
+            color: $content-color;
+        }
     }
     .read-more{
         &:hover, &:active{
             background-color: $bg-color2;
             color: white;
+        }
+    }
+    .post-date{
+        font-size: 16px;
+        line-height: 1.2;
+        color: #666666;
+    }
+    .post-meta{
+        margin-bottom: toRem(24);
+        display: flex;
+        gap: 1rem;
+        .icon{
+            color: $bg-color2;
+            margin-right: toRem(8);
         }
     }
 }

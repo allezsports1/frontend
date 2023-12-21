@@ -13,7 +13,7 @@ const PageSidebar = ({pageType,data,searchAction})=>{
             <CustomBox>
                 <CustomSearch search={searchAction} />
             </CustomBox>
-            <CustomBox >
+            <CustomBox className="widget">
                 <Typography variant="h5" className="title">{PAGE_BLOGS.RECENT_POSTS}</Typography>
                     <Divider className="divider" light />
                 <Typography>

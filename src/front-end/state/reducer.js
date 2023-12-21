@@ -1,8 +1,10 @@
-import { SET_BLOG_LIST, SET_ABOUT_US_CONTENT } from "./constants"
+import { SET_BLOG_LIST, SET_ABOUT_US_CONTENT, USER_LOGIN_SUCCESS, FORGET_PASSWORD_SUCCESS } from "./constants"
 
 export const initialState = {
    blogResponse : [],
-   contactUsResponse : []
+   contactUsResponse : [],
+   loginResponse: [],
+   forgetPasswordResponse: [],
 }
 
 export const clientReducer = (state = initialState, action) => {
@@ -17,6 +19,18 @@ export const clientReducer = (state = initialState, action) => {
                 ...state,
                 contactUsResponse: action.data,
             };
+        case USER_LOGIN_SUCCESS : 
+            return {
+                ...state,
+                loginResponse: action.data,
+            };
+
+        case FORGET_PASSWORD_SUCCESS : 
+            return {
+                ...state,
+                forgetPasswordResponse: action.data,
+            };
+
         default:
             return state
     }
