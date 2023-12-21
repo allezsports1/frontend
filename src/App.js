@@ -11,7 +11,7 @@ function App() {
           <section className='header'>
             <Header />
           </section>
-          <section className='main'>
+          <section className='main pt-[73px]'>
             <RouteList />
           </section>
           <section className='footer'>
