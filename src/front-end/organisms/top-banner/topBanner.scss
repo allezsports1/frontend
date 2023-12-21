@@ -1,5 +1,30 @@
-
+@import "../../../sass/index.scss";
 
 .top-banner{
-    
+    text-align: center; 
+    width: 100%;
+    height: auto;
+    position: relative;
+    margin-top: 0;
+    margin-bottom: toRem(65);
+    .image-container{
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .cover_color{
+        background-color: rgba(0,0,0,0.5);
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        .header_title{
+            color: $color-white;
+            padding: toRem(90) 0 toRem(17) 0;
+            font-size: toRem(36);
+            font-weight: 700;
+            line-height: 1.2em;
+            text-transform: uppercase;
+        }
+    }
 }

@@ -94,6 +94,9 @@ const Navbar = () => {
            + create event
           </button>
           </li>
+          <li className="sub">
+            <Link to="/member-login">Login</Link>
+          </li>
         </ul>
         <div className="lg:hidden md:block xl:hidden 2xl:hidden  sm:block">
         <ul className='menu flex items-center float-right right-[50px] relative'>

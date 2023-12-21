@@ -11,6 +11,7 @@ module.exports = {
         '2xl':'1440px',  // Extra-large screens
       },
     },
+    extend: {},
   },
   plugins: [],
 }
