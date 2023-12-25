@@ -4,7 +4,14 @@
     background: $bg-color;
     box-shadow: 0 0 toRem(7) toRem(1) $rgb-color1;
     transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;
-    padding: 0 toRem(15);
+    .header_section{
+        display: flex;
+        width: 100%;
+        align-items: center;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        padding: 0 toRem(15);
+    }
 }
 .main{}
 .footer{}
