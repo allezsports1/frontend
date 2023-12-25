@@ -12,8 +12,4 @@ const CustomBox = styled(Paper)(({ theme }) => ({
     color: theme.palette.text.secondary,
 }));
 
-const CustomPapper= ()=>{
-    return (<Paper className="paperClass">square corners</Paper>)
-}
-
 export default CustomBox;

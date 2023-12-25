@@ -1,15 +1,16 @@
-import React,{useState,useEffect} from 'react';
+import {useState} from 'react';
 import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
 import ArrowRightIcon from '@mui/icons-material/ArrowRight';
 import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 import { Link } from 'react-router-dom';
 import classes from './navbar.scss';
+import { NAVIGATION } from '../../../constants';
+
 const Navbar = () => {
   const[toggleNav,setToggleNav] = useState(false);
   const toggle = () =>{
     setToggleNav((p) => !p);
-    // console.log(toggleNav)
   }
 
   const [traningMenu, setTraningMenu] = useState(false);
@@ -44,10 +45,10 @@ const Navbar = () => {
       <nav className="navbar w-full">
         <ul className='menu hidden md:hidden sm:hidden lg:block xl:block 2xl:block'>
           <li className="font-medium text-sm">
-            <Link to="/" className={`text-[${classes.bgColor2}] hover:text-[${classes.bgColor2}]`}>Home</Link>
+            <Link to={NAVIGATION.home.link} className={`text-[${classes.bgColor2}] hover:text-[${classes.bgColor2}]`}>{NAVIGATION.home.name}</Link>
           </li>
           <li className="font-medium text-sm relative group">
-            <Link to="/" className={`text-dark hover:text-[${classes.bgColor2}]`}>Tranings <ArrowDropDownIcon/></Link>
+            <Link to="!#" className={`text-dark hover:text-[${classes.bgColor2}]`}>Tranings <ArrowDropDownIcon/></Link>
             <ul className='border-gray-200 border absolute hidden w-[180px] space-y-2 bg-white left-2 top-[50px] shadow-md group-hover:flex flex-col items-start '>
               <li className={`text-sm text-dark hover:text-[${classes.bgColor2}] font-medium flex justify-between border-b-2 p-1 border-gray-200 w-full`}><span>Upcoming trainings</span></li>
               <li className={`text-sm text-dark hover:text-[${classes.bgColor2}] font-medium flex justify-between border-b-2 p-1 border-gray-200 w-full`}><span>Past Trainings</span></li>
@@ -85,17 +86,17 @@ const Navbar = () => {
             <Link to="/blog">Contact us</Link>
           </li>
           <li className="sub flex items-center mt-[1px]  text-sm font-medium">
-            <Link to="/member-login" className={`text-dark hover:text-[${classes.bgColor2}]`}>Login</Link>
+            <Link to={NAVIGATION.login.link} className={`text-dark hover:text-[${classes.bgColor2}]`}>{NAVIGATION.login.name}</Link>
             <span className='text-dark'>|</span>
-            <Link to="/register" className={`text-dark hover:text-[${classes.bgColor2}]`}>Reigster</Link>
+            <Link to={NAVIGATION.register.link} className={`text-dark hover:text-[${classes.bgColor2}]`}>{NAVIGATION.register.name}</Link>
           </li>
           <li className="sub flex items-center h-[50px] mt-[4px]">
           <button className={`focus:outline-none bg-[${classes.bgColor2}] hover:bg-[white] text-[white]  hover:text-[${classes.bgColor2}] py-1 px-2 border border-[#e86c60] rounded-md duration-200 text-center`}>
            + create event
           </button>
           </li>
-          <li className="sub">
-            <Link to="/member-login">Login</Link>
+          <li className="sub lg:hidden md:block xl:hidden 2xl:hidden  sm:block">
+            <Link to={NAVIGATION.login.link}>{NAVIGATION.login.name}</Link>
           </li>
         </ul>
         <div className="lg:hidden md:block xl:hidden 2xl:hidden  sm:block">
@@ -104,7 +105,7 @@ const Navbar = () => {
             <MenuIcon className='text-dark cursor-pointer' onClick={toggle}/>
           </li>
           <li className="sub flex items-center text-sm font-medium">
-            <Link to="/member-login" className={`text-dark hover:text-[${classes.bgColor2}] `}>Login</Link>
+            <Link to={NAVIGATION.login.link} className={`text-dark hover:text-[${classes.bgColor2}] `}>{NAVIGATION.login.name}</Link>
           </li>
         </ul>
         </div>
@@ -113,7 +114,7 @@ const Navbar = () => {
         <span className="text-right ml-[14px] text-4xl cursor-pointer"><CloseIcon onClick={toggle}/></span>
         <ul className='menu'>
           <li className={`text-[${classes.bgColor2}] text-sm flex items-center justify-between w-full hover:text-[${classes.bgColor2}] font-medium`}>
-            <Link to="/">Home</Link>
+            <Link to={NAVIGATION.home.link}>{NAVIGATION.home.name}</Link>
             {/* <span className="cursor-pointer" >
         <ArrowRightIcon />
       </span> */}

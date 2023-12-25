@@ -6,6 +6,20 @@
     transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;
     padding: toRem(90) 0;
     background-color: $bg-color3;
+    .footer-logo{
+        margin: 0 0 toRem(24) 0;
+        img{
+            width: toRem(130);
+        }
+    }
+    p{
+        color: $content-color1;
+    }
+    h5{
+        color: $color-white;
+        font-size: toRem(22);
+        font-weight: 600;
+    }
 }
 
 .bottom-footer{
